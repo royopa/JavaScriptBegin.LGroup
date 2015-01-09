@@ -6,7 +6,23 @@
     <!-- Styles -->
     <link href="../Styles/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        
+        // Função anônima
+        (function () {
+            // OnLoad é um evento do navegador
+            // que é executado no final de renderizar o HTML
+            window.onload = AtribuirAno;
 
+        })();
+
+        function AtribuirAno() {
+            // Manipulando o DOM da página
+            var lblTimeYear = document.getElementById('lblTimeYear');
+            lblTimeYear.textContent = new Date().getFullYear();
+        }
+
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -77,7 +93,7 @@
 
         <hr />
         <footer>
-            <p>&copy; - My JavaScript Application</p>
+            <p>&copy; <label id="lblTimeYear"></label> - My JavaScript Application</p>
         </footer>
     </div>
 </body>
