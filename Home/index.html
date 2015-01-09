@@ -29,7 +29,6 @@
 
             <div class="form-horizontal">
 
-                <!--
                 <div class="form-group">
                     <label class="control-label col-md-2" for="txtNome">Nome</label>
                     <div class="col-md-10">
@@ -39,7 +38,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-2" for="ddlCidade">Cidade</label>
                     <div class="col-md-3">
-                        <select class="form-control">
+                        <select class="form-control" id="ddlCidade">
                             <option value="0">--- Selecione ---</option>
                         </select>
                     </div>
@@ -50,17 +49,17 @@
                     <label class="control-label col-md-2" for="ckbAtivo">Ativo?</label>
                     <div class="col-md-10">
                         <div class="checkbox">
-                            <input class="check-box" id="ckbAtivo" name="IsAtivo" type="checkbox" value="true">
+                            <input class="check-box" id="ckbAtivo" name="isAtivo" type="checkbox" value="true">
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <input type="button" value="..." class="btn btn-primary">
+                        <button class="btn btn-primary" onclick="onCadastrarClienteClick()">Cadastrar</button>
                     </div>
                 </div>
-                    -->
+                
             </div>
         </form>
 
