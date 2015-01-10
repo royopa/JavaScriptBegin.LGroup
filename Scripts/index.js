@@ -23,10 +23,12 @@ function atribuirAno() {
 }
 
 function onCadastrarClienteClick() {
-    if (validarCadastroCliente()) {
-        alert('Cadastrado');
-    }
-    alert('Ocorreu um erro ao cadastrar o cliente, tente novamente.');
+    if (validarCadastroCliente() === false) {
+        alert('Ocorreu um erro ao cadastrar o cliente, tente novamente.');
+        return;  
+    } 
+    
+    alert('Cadastrado');
 }
 
 function validarCadastroCliente() {
@@ -38,7 +40,6 @@ function validarCadastroCliente() {
 
     var msgErro  = '';
 
-
     if (nome.value.trim() === "") {
         msgErro += 'Por favor, informe o nome.' + '\n';
         isValido = false;
@@ -46,6 +47,11 @@ function validarCadastroCliente() {
 
     if (cidade.value === "0") {
         msgErro += 'Por favor, informe a cidade.' + '\n';
+        isValido = false;
+    }
+
+    if (!ckbAtivo.checked) {
+        msgErro += 'O cliente tem que ser ativo.' + '\n';
         isValido = false;
     }
 
